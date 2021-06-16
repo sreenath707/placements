@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+      body{
+        background-image: url('https://www.jesusislife.in/wp-content/uploads/2019/05/Savin-NY-Website-Background-Web.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      h1{
+        color:brown;
+      }
+      th{
+        color: purple;
+      }
+    </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="/">Placements</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About us</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Year
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="/placements/2018">2018</a>
+            <a class="dropdown-item" href="/placements/2019">2019</a>
+            <a class="dropdown-item" href="/placements/2020">2020</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+      <h1>Students placed</h1>
+      <section id="container">
+        <table border="1px">
+          <thead>
+            <th>ID</th>
+            <th>Name</th>
+            <th>GPA</th>
+            <th>Company</th>
+            <th>Salary(LPA)</th>
+            <th>Year</th>
+          </thead>
+          <tfoot>
+            <% for(let x of list){ %>
+            <tr>
+              <td><%= x.roll_no  %></td>
+              <td><%= x.name  %></td>
+              <td><%= x.gpa  %> </td>
+              <td><%= x.company  %></td>
+              <td><%= x.salary  %></td>
+              <td><%= x.year  %> </td>
+            </tr>
+            <% } %> 
+          </tfoot>
+        </table>
+        <% if(isCompany){ %> 
+        <a href="/add">Add new students</a>
+        <% } %> 
+      </section> 
+      
+</body>
+</html>

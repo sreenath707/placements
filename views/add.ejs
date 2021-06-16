@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="homestyle.css">
+</head>
+<body>
+    <h1>Fill the form</h1>
+    
+    <form action="/add" method="POST">
+        <div>
+            <label for="name">Student Name : </label>
+            <input type="text" id="name" name="name">
+    
+            <label for="year">year : </label>
+            <input type="number" id="year" name="year">
+        </div>
+        <div>
+            <label for="branch">branch : </label>
+            <select name="branch" id="branch">
+                <option value="cse">CSE</option>
+                <option value="ce">CE</option>
+                <option value="IT">IT</option>
+                <option value="ece">ECE</option>
+            </select>
+        </div>
+        <div>
+            <label for="roll_no">roll_no : </label>
+        <input type="text" id="roll_no" name="roll_no">
+
+        <label for="company">company : </label>
+        <select name="company" id="company">
+           <option value="google">google</option>
+           <option value="IBM">IBM</option>
+           <option value="samsung">samsung</option>
+           <option value="Microsoft">Microsoft</option>
+           <option value="DELL">Dell</option>
+           <option value="Infosys">Infosys</option>
+           <option value="Accenture">Accenture</option>
+           <option value="sumtotal">sumtotal</option>
+        </select>
+        </div>
+        <div>
+            <label for="salary">salary : </label>
+        <input type="number" id="salary" name="salary">
+
+        <label for="gpa">GPA : </label>
+        <input type="text" id="gpa" name="gpa">
+        </div>
+        <div>
+            <label for="age">Age : </label>
+            <input type="number" id="age" name="age">
+        </div>
+        <button>submit</button>
+
+    </form>
+</body>
+</html>
