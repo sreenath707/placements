@@ -19,6 +19,7 @@ const users = require('./models/usermodel.js');
  
 isCompany=false;
 
+
 app.get('/',(req,res)=>{
     res.render('home');
 });
